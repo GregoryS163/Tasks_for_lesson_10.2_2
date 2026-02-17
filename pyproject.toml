@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tasks-for-lesson-10-2-2"
+version = "0.1.0"
+description = ""
+authors = ["Gregory Salnikov <greengo86@mail.ru>"]
+readme = "README.md"
+packages = [{include = "tasks_for_lesson_10"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
