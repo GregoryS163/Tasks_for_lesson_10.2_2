@@ -4,8 +4,8 @@ from src.utils import calculate_taxes
 
 
 def test_calculate_taxes_basic(list_float):
-    assert calculate_taxes(list_float, 10) == [110.0, 165.0, 22.55, 643.5]
-    assert calculate_taxes(list_float, 0) == [100.0, 150.0, 20.5, 585.0]
+    assert calculate_taxes(list_float, 10) == [110, 165, 22.55, 643.5]
+    assert calculate_taxes(list_float, 0) == [100, 150.0, 20.5, 585.0]
 
 
 def test_calculate_taxes_with_invalid_args(list_float):
@@ -14,7 +14,7 @@ def test_calculate_taxes_with_invalid_args(list_float):
     assert str(negative_rate.value) == 'Неверный налоговый процент'
 
     with pytest.raises(ValueError) as negative_price:
-        calculate_taxes([20.0, 55.5, -8.0], 5.0)
+        calculate_taxes([20.0, 55.5, -1], 5.0)
     assert str(negative_price.value) == 'Неверная цена'
 
     with pytest.raises(ValueError) as zero_price:
